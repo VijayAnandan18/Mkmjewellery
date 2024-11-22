@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+
+.marquee-wrapper {
+  margin: 0;
+  padding: 0;
+  position: sticky; /* Keeps it at the top during scroll */
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: white; /* Adjust if needed */
+  overflow: hidden;
+}
+
+.marquee-container-custom {
+  position: relative;
+  width: 100%; /* Full width */
+  height: 30px;
+  background-color: #700B00;
+  color: white;
+  overflow: hidden;
+  border-radius: 0; /* No rounding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.marquee-text-custom {
+  position: absolute;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInOutCustom 6s linear infinite;
+}
+
+.marquee-text-custom:nth-child(1) {
+  animation-delay: 0s; /* First sentence starts immediately */
+}
+
+.marquee-text-custom:nth-child(2) {
+  animation-delay: 3s; /* Second sentence starts after the first fades out */
+}
+
+@keyframes fadeInOutCustom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}

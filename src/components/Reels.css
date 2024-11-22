@@ -1,0 +1,64 @@
+/* Grid container */
+.reels-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    width: 90%;
+    max-width: 800px;
+    justify-content: center;
+    margin: auto; /* Ensure the grid is centered horizontally */
+  }
+  
+  /* Card styles */
+  .reel-card {
+    padding: 20px;
+    background: radial-gradient(#76b2fe, #b69efe);
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Positioning cards */
+  .reel-card-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .reel-card-2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .reel-card-3 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  
+  .reel-card-4 {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  
+  .reel-card-5 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .reels-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  
+    .reel-card-5 {
+      grid-row: auto;
+    }
+  }

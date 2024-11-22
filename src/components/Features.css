@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+
+/* Container styles */
+.features-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  justify-content: center; /* Centers items horizontally */
+  gap: 5px; /* Gap between cards (for larger screens) */
+  padding: 20px;
+}
+
+/* Card styles */
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  width: 150px; /* Adjust width to fit designs */
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  color: #700b00;
+  font-family: "Lora";
+  /* Removed box-shadow */
+}
+
+/* Gradient Animation */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after, .card::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: conic-gradient(
+    from var(--angle),
+    #F0E68C,
+    #DAA520 80%,
+    #FFD700 80%,
+    #FFA500 80%,
+    #FFD700 80%
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 5px;
+  border-radius: 10px;
+  animation: spin 2s linear infinite;
+}
+
+.card::before {
+  padding: 5px;
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Adjust card width for smaller screens */
+    margin-bottom: 10px; /* Add gap between cards in mobile view */
+  }
+
+  /* Optionally, adjust the gap between cards in mobile view */
+  .features-container {
+    gap: 15px; /* Increase gap for better spacing in mobile view */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Full width on very small screens */
+  }
+}
