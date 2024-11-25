@@ -2,28 +2,25 @@
   display: grid;
   grid-template-columns: repeat(2, 200px); /* Default 2 columns */
   grid-auto-rows: minmax(200px, auto);
-  gap: 50px; /* This sets both horizontal and vertical gap between grid items */
+  gap: 50px; /* Gap between grid items */
   width: 100%; /* Set the width of the grid container */
-  margin-left: 10px ; /* Center the container horizontally */
-  height:500px;
+  margin-left: 50px; /* Center the container horizontally */
+  height: 500px;
 }
 
 .main {
   background: #ba8e23;
-  width:700px;
+  width: 700px;
   grid-row: span 1; /* Default: 1 row height */
-  height: 450px; /* Fill available height */
-  background-size: cover; /* Make the background image cover the entire div */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repeating */
-  border-radius: 10px; /* Optional: Add rounded corners */
+  height: 450px; /* Set height for the image area */
+  border-radius: 10px; /* Optional: Rounded corners */
 }
 
-
+/* Sub-div styling */
 .sub {
   background: #90d5ff;
   height: 100%;
-  width:550px;
+  width: 500px;
 }
 
 /* Responsive Breakpoints */
@@ -32,27 +29,28 @@
 @media (max-width: 768px) {
   .container {
     display: flex; /* Switch to flexbox */
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    justify-content: center; /* Center items horizontally */
-    gap: 10px; /* Add spacing between flex items */
-    height:400px;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center horizontally */
+    gap: 10px;
+    height: 400px;
+    margin-left: 0px;
   }
 
   .main {
-    width: 100%; /* Full width */
-    height: 200px; /* Adjust height */
+    width: 100%; /* Full width on mobile */
+    height: 220px; /* Adjust height for mobile */
   }
 
   .sub {
-    width: 45%; /* Each sub takes 48% of the width to fit two in a row */
-    height: 150px; /* Adjust height for smaller screens */
+    width: 45%; /* Sub divs take 45% width */
+    height: 150px; /* Adjust height for mobile */
   }
 }
 
 /* For devices 800px or larger */
 @media (min-width: 800px) {
   .container {
-    grid-template-columns: repeat(3, 200px); /* Three columns */
+    grid-template-columns: repeat(3, 200px); /* Three columns layout */
   }
 
   .main {
@@ -64,11 +62,11 @@
 /* For devices 1000px or larger */
 @media (min-width: 1000px) {
   .container {
-    grid-template-columns: repeat(4, 200px); /* Four columns */
+    grid-template-columns: repeat(4, 200px); /* Four columns layout */
   }
 
   .main {
     grid-column: span 3;
-    grid-row: span 3; /* Main div takes up 3 rows */
+    grid-row: span 3; /* Main div spans 3 rows */
   }
 }

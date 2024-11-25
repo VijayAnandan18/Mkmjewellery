@@ -7,18 +7,19 @@
   color: #700B00;
   cursor: pointer;
 }
-/* Basic Styles */
+/* Header Styles */
 .header-two {
   width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 20px 0;
-  height:25px;
-  position: relative; /* Ensure it establishes a stacking context */
-  z-index: 10; /* Higher than the hero video */
+  height: 10px; /* Max height of the header */
+
+  position: relative; /* Establish stacking context */
+  z-index: 10; /* Ensure it's above background elements */
 }
 
+/* Ensure navigation bar aligns properly */
 .nav {
   display: flex;
   justify-content: center;
@@ -26,33 +27,47 @@
   width: 100%;
   font-weight: bold;
   position: relative;
-  z-index: 15; /* Ensure it is above the header background */
+  z-index: 15; /* Keep above background */
+  padding: 0; /* Remove extra padding */
+  margin: -10px 0; /* Adjust to fit within 10px height */
 }
 
 /* Dropdown Styles */
 .dropdown {
-  display: none;
+  display: none; /* Hidden by default */
   position: absolute;
-  top: 100%;
+  top: 100%; /* Align just below the nav-item */
   left: 0;
   background-color: #fff;
   list-style: none;
-  padding: 0;
+  padding: 5px 0; /* Add some spacing */
   margin: 0;
   min-width: 150px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for better visibility */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for visibility */
   z-index: 20; /* Ensure dropdown is above other elements */
 }
 
+/* Show dropdown on hover */
 .nav-item:hover .dropdown {
   display: block;
 }
 
-/* Mobile Responsive Design */
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Default: hidden */
+  font-size: 20px; /* Reduce font size */
+  background: none;
+  border: none;
+  color: #700B00;
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* Show hamburger only on mobile */
+    display: block; /* Show hamburger on smaller screens */
   }
+
   .nav {
     flex-direction: column;
   }
@@ -61,8 +76,8 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    position: absolute; /* Allow proper positioning */
-    top: 100%; /* Align under the header */
+    position: absolute; /* Proper positioning */
+    top: 100%; /* Align under header */
     left: 0;
     background-color: #fff;
     z-index: 15;
@@ -74,10 +89,6 @@
 
   .dropdown {
     position: relative;
-    min-width: 100%;
-  }
-
-  .nav-item:hover .dropdown {
-    display: block;
+    min-width: 100%; /* Fit dropdown to the full width */
   }
 }

@@ -2,39 +2,35 @@ import React, { useState, useEffect } from 'react';
 import './HeroCarousel.css';
 
 const HeroCarousel = () => {
-  const [videoSrc, setVideoSrc] = useState("assets/hero.webm"); // Default video source for desktop
+  const images = [
+    "assets/hero1.png",
+    "assets/hero2.png",
+    "assets/hero3.png",
+    "assets/hero4.png"
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    // Function to update video source based on window size
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setVideoSrc("assets/heroreels.webm"); // Change to mobile video on smaller screens
-      } else {
-        setVideoSrc("assets/hero.webm"); // Default desktop video
-      }
-    };
+    // Change the image every 3 seconds
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
 
-    // Call once initially to set the correct video on page load
-    handleResize();
-
-    // Add resize event listener to update the video on window resize
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Empty dependency array to only run once on mount
+    // Cleanup interval on unmount
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div className="hero-carousel">
-      <video
-        className="hero-video"
-        src={videoSrc} // Dynamically set the video source
-        autoPlay
-        loop
-        muted
-      />
+      {images.map((image, index) => (
+        <img
+          key={index}
+          className={`hero-image ${index === currentImageIndex ? 'active' : ''}`} // Add 'active' class to the current image
+          src={image}
+          alt={`Slide ${index + 1}`}
+        />
+      ))}
     </div>
   );
 };

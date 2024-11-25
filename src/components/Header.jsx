@@ -9,7 +9,6 @@ const Header = () => {
   const [goldRate, setGoldRate] = useState(null);
 
   useEffect(() => {
-    // Fetch the user's location and country flag
     const fetchLocation = async () => {
       try {
         const response = await fetch("https://ipapi.co/json/");
@@ -18,7 +17,6 @@ const Header = () => {
         setFlag(`https://flagcdn.com/w40/${data.country_code.toLowerCase()}.png`);
       } catch (error) {
         console.error("Error fetching location:", error);
-        // Fallback to India if location fetch fails
         setCountry("India");
         setFlag("india-flag.png");
       }
@@ -30,12 +28,11 @@ const Header = () => {
   useEffect(() => {
     const fetchGoldRate = async () => {
       try {
-        // Use a CORS proxy if needed
         const response = await fetch(
           "https://cors-anywhere.herokuapp.com/https://trademade.com/api/gold-rate?apiKey=7ru57IRbn57oAhJmCEoB"
         );
         const data = await response.json();
-        setGoldRate(data.rate); // Assuming 'rate' is the field that holds the gold rate
+        setGoldRate(data.rate);
       } catch (error) {
         console.error("Error fetching gold rate:", error);
       }
@@ -45,20 +42,17 @@ const Header = () => {
   }, []);
 
   return (
-    <header
-      className="header"
-      style={{
-        background: `url("assets/headerbg.jpg") no-repeat center center`,
-        backgroundSize: "cover",
-      }}
-    >
+    <header className="header">
       <div className="logo-container">
-        <img src="assets/logoimg.png" alt="Logo" className="logo" />
+        <img src="assets/logo1.png" alt="Logo" className="logo" />
+        <img src="assets/logo2.png" alt="Logo" className="logo" style={{ width: "140px" }}/>
       </div>
 
       <div className="search-container">
-        <input type="text" placeholder="Search" className="search-box" />
-      </div>
+
+  <input type="text" placeholder="Search" className="search-box" />
+</div>
+
 
       <div className="location-container">
         <IoLocationOutline className="location-icon" />

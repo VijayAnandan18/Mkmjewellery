@@ -14,7 +14,7 @@ body {
   align-items: center;
   padding: 10px 20px;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.0);
   flex-wrap: wrap;
   gap: 20px;
   height: fit-content;
@@ -23,9 +23,10 @@ body {
 
 /* Logo */
 .logo-container img {
-  width: 60px;
+  width: 50px;
   height: auto;
 }
+
 
 /* Phone Icon */
 .phone-container {
@@ -49,15 +50,23 @@ body {
 /* Search box styles */
 .search-container .search-box {
   padding: 8px 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  border-radius: 20px;
+  border: 1px solid #b67f00;
   font-size: 1rem;
   width: 350px;
   transition: border-color 0.3s ease; /* Smooth transition */
 }
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color:#b67f00 ;
+}
 
 .search-container .search-box:focus {
-  border-color: rgb(182, 127, 0); /* Change border color on focus */
+  border-color: #b67f00; /* Change border color on focus */
   outline: none; /* Remove default outline */
 }
 
@@ -229,20 +238,15 @@ body {
     gap: 10px;
     padding: 15px;
   }
-
-  /* Centering the logo in mobile view */
-  .logo-container {
-    flex: 1;
-    text-align: center;
-    order: 1; /* Ensure logo is in the middle */
-  }
+ 
+  
 
   .search-container, .location-container, .country-container {
     display: none; /* Hide these sections in mobile */
   }
 
   .phone-container, .gold-rate {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 10px;
     order: 2; /* Ensure phone and gold rate appear after the logo */

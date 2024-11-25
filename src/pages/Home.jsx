@@ -19,11 +19,15 @@ const Home = () => {
       <HeaderTwo/>
     <HeroCarousel/>
        <GridLayout/>
-       <Features/>
-      <FeaturesCircular/>
-     {/*<NewArrivals/>
-     <GoldJewellery/>
-      <Reels/>*/}
+       <div className="features-section">
+        <Features />
+      </div>
+
+    
+       <FeaturesCircular/>
+    <NewArrivals/>
+    <GoldJewellery/>
+       {/*<Reels/>*/}
     
     </div>
   );

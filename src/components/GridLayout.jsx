@@ -7,11 +7,21 @@ const GridLayout = () => {
       <div
         className="main"
         style={{
-          backgroundImage: `url("assets/about1.jpg")`, // Add the main image
+          backgroundImage: `url("assets/about1.png")`, // Main image URL
+          backgroundSize: "cover", // Ensures the image covers the entire div
+          backgroundPosition: "center", // Centers the image
         }}
       ></div>
-      <div className="sub"></div>
-      <div className="sub"></div>
+      <div className="sub" style={{
+          backgroundImage: `url("assets/about2.jpeg")`, // Main image URL
+          backgroundSize: "cover", // Ensures the image covers the entire div
+          backgroundPosition: "center", // Centers the image
+        }}></div>
+      <div className="sub"  style={{
+          backgroundImage: `url("assets/about3.jpeg")`, // Main image URL
+          backgroundSize: "cover", // Ensures the image covers the entire div
+          backgroundPosition: "center", // Centers the image
+        }}></div>
     </div>
   );
 };
