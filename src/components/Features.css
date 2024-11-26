@@ -1,3 +1,16 @@
+.features-section {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.features-description {
+  font-family: "Mier demi", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
 .features-container {
   width: 100%;
   display: flex;
@@ -6,9 +19,9 @@
 
 .features-row {
   display: flex;
-  flex-wrap: wrap; /* Ensures that the cards wrap in a row */
+  flex-wrap: wrap;
   gap: 20px; /* Space between cards */
-  justify-content: center; /* Center cards horizontally */
+  justify-content: center;
 }
 
 .features-card {
@@ -49,43 +62,74 @@
 }
 
 .features-card-image {
-  margin-bottom: -20px; /* Adjusts spacing below the image */
+  margin-bottom: -20px;
 }
 
 .features-card-title {
-  margin: 5px 0; /* Reduces gap above and below the heading */
-  font-size: 16px; /* Optional: Adjust the font size */
+  margin: 5px 0;
+  font-size: 16px;
 }
 
 .features-card-description {
-  margin: 5px 0; /* Reduces gap above and below the paragraph */
-  padding: 0; /* Removes additional padding */
-  font-size: 14px; /* Optional: Adjust the font size */
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.one h1 {
+  text-align: center;
+
+  padding-bottom: 5px;
+}
+
+.one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #700B00;
+}
+
+.one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #700B00;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .features-card {
-    width: 250px; /* Adjust card size on smaller screens */
+    width: 250px;
     height: 160px;
   }
+
 }
 
 @media (max-width: 480px) {
   .features-card {
-    width: 80%; /* Adjust card width */
-    height: 140px; /* Adjust card height */
+    width: 80%;
+    height: 140px;
   }
 
   .features-card-image {
-    margin-bottom: -15px; /* Adjust spacing for smaller cards */
+    margin-bottom: -15px;
   }
 
   .features-card-title {
-    font-size: 14px; /* Adjust heading size */
+    font-size: 14px;
   }
 
   .features-card-description {
-    font-size: 12px; /* Adjust paragraph text size */
+    font-size: 12px;
   }
 }
+

@@ -1,0 +1,106 @@
+/* Main container for the shop page */
+.shop-container {
+    padding: 2rem;
+    background-color: #ba8f2311;
+  }
+  
+  /* Navigation styles */
+  .shop-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .shop-nav button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #700b00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .shop-nav button:hover {
+    background-color: #b67f00;
+  }
+  
+  /* Grid container for the jewelry images */
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Card for each jewelry image */
+  .shop-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* Heading Styles */
+.shop-heading {
+  margin-bottom: 2rem; /* Space between heading and navigation */
+}
+
+.one h1 {
+  text-align: center;
+
+  padding-bottom: 5px;
+}
+.one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #700B00;
+}
+.one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #700B00;
+}
+
+  /* Responsive styles */
+  
+  /* Mobile view */
+  @media (max-width: 768px) {
+    .shop-nav button {
+      padding: 0.4rem 1.0rem; /* Reduce the padding of buttons */
+      font-size: 0.7rem; /* Slightly reduce the font size */
+    }
+  
+    .shop-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+      gap: 1rem; /* Reduced gap between items */
+    }
+  
+    .shop-card img {
+      max-width: 90%; /* Reduce card width to fit properly on mobile */
+      margin: 0 auto; /* Center the images */
+    }
+  }
+  
+  /* Tablet and larger screens */
+  @media (min-width: 1024px) {
+    .shop-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+  }
+  

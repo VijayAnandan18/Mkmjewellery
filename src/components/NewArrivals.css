@@ -2,6 +2,7 @@
   text-align: center;
   background: var(--bg);
   padding: 20px;
+  margin-left: 10px;
 }
 
 .new-arrivals h1 {
@@ -64,3 +65,8 @@
   background-color: #fff;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+.new-arrivals {
+
+  margin-left: 0px;
+}}

@@ -1,104 +1,48 @@
 .goldjewellery-container {
-    padding: 30px;
-  }
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goldcards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.goldcard {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.goldcard:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.goldcard__image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Adjust card size on mobile view */
+@media (max-width: 768px) {
   
-  /* Heading */
-  .heading {
-    text-align: center;
-  }
-  
-  .heading__title {
-    font-weight: 600;
-  }
-  
-  .heading__credits {
-    margin: 10px 0px;
-    color: #888888;
-    font-size: 25px;
-    transition: all 0.5s;
-  }
-  
-  .heading__link {
-    text-decoration: none;
-  }
-  
-  .heading__credits .heading__link {
-    color: inherit;
-  }
-  
-  /* Cards */
   .goldcards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px; /* Optional: Adds some padding to the container */
   }
-  
+
   .goldcard {
-    padding: 20px;
-    width: 100%;
-    max-width: 400px;
-    min-height: 200px;
-    display: grid;
-    grid-template-rows: 20px 50px 1fr 50px;
-    border-radius: 10px;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-    transition: all 0.2s;
+    max-width: 100%; /* Increase the card width on mobile (from 90% to 95%) */
+    margin: 0 auto; /* Center the card */
   }
-  
-  .goldcard:hover {
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-    transform: scale(1.01);
-  }
-  
-  .goldcard__link,
-  .goldcard__exit,
-  .goldcard__icon {
-    position: relative;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
-  }
-  
-  .goldcard__link::after {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    content: "";
-    width: 0%;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.6);
-    transition: all 0.5s;
-  }
-  
-  .goldcard__link:hover::after {
-    width: 100%;
-  }
-  
-  .goldcard__exit {
-    grid-row: 1/2;
-    justify-self: end;
-  }
-  
-  .goldcard__icon {
-    grid-row: 2/3;
-    font-size: 30px;
-  }
-  
-  .goldcard__title {
-    grid-row: 3/4;
-    font-weight: 400;
-    color: #ffffff;
-  }
-  
-  .goldcard__apply {
-    grid-row: 4/5;
-    align-self: center;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .goldcards {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+}
