@@ -6,7 +6,7 @@ const Features = () => {
     <div className="features-section">
       {/* Heading Section */}
       <div className="one">
-        <h1>Quality-First Service</h1>
+        <h1>Pure Elegance</h1>
       </div>
       <p className="features-description">
         We assure you that you will get what you can trust. Always!

@@ -3,7 +3,13 @@ import "./Reels.css";
 
 const Reels = () => {
   return (
+    <div>
+    <div className="one">
+    <h1>Follow Us On Instagram</h1>
+    <p>Stay Updated with Our Stories and Updates on Instagram</p>
+  </div>
     <div className="reels-container">
+      
       <div className="reel-card reel-card-1">
         <img
           src="assets/mkmreel1.jpg"
@@ -34,13 +40,15 @@ const Reels = () => {
       </div>
       <div className="reel-card reel-card-5">
         <video
-          src="assets/mkmreel1.mp4"
+          src="assets/mkmreels5.mp4"
           className="reel-card__video"
           controls
           loop
+          autoPlay
           muted
         />
       </div>
+    </div>
     </div>
   );
 };

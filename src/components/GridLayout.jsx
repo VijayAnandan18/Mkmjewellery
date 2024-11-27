@@ -3,7 +3,7 @@ import "./GridLayout.css"; // External CSS file for the styles
 
 const GridLayout = () => {
   return (
-    <div>
+    <div className="Gridlayout">
       {/* Heading Section */}
       <div className="one">
         <h1>About Our Store</h1>

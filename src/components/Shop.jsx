@@ -42,7 +42,8 @@ const Shop = () => {
     <div className="shop-container">
       {/* Heading Section */}
       <div className="shop-heading one">
-        <h1>Shop by Category</h1>
+        <h1>Our Collections</h1>
+        <p>Find Jewelry for Women, Men, and Kids</p>
       </div>
 
       {/* Navigation */}

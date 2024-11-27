@@ -31,8 +31,10 @@
 /* Video styling */
 .reel-card__video {
   width: 100%;
+  aspect-ratio: 410 / 726; /* Maintain the aspect ratio */
   height: 100%;
   object-fit: cover;
+  
 }
 
 /* Positioning cards */

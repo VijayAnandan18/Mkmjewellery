@@ -27,15 +27,35 @@ const HeaderTwo = () => {
           <li className="nav-item">
             <a href="#">Gold</a>
             <ul className="dropdown">
-              <li><a href="#">Gold Coins</a></li>
-              <li><a href="#">Gold Schemes</a></li>
+              <li><a href="#">Rings</a></li>
+              <li><a href="#">Earring</a></li>
+              <li><a href="#">Pendants</a></li>
+              <li><a href="#">chains</a></li>   
+               <li><a href="#">Necklaces</a></li>
+                 <li><a href="#">Nosepins</a></li>
+          
+            </ul>
+          </li>
+          <li className="nav-item">
+            <a href="#">Diamond</a>
+            <ul className="dropdown">
+              <li><a href="#">Rings</a></li>
+              <li><a href="#">Earring</a></li>
+              <li><a href="#">Pendants</a></li>
+              <li><a href="#">chains</a></li>   
+               <li><a href="#">Necklaces</a></li>
+                 <li><a href="#">Nosepins</a></li>
+          
             </ul>
           </li>
           <li className="nav-item">
             <a href="#">Silver</a>
             <ul className="dropdown">
               <li><a href="#">Silver Coins</a></li>
-              <li><a href="#">Silver Schemes</a></li>
+              <li><a href="#">Idols</a></li>
+              <li><a href="#">Articles</a></li>
+              <li><a href="#">Bangles & Bracelets</a></li>
+              <li><a href="#">Chains</a></li>
             </ul>
           </li>
           <li className="nav-item">

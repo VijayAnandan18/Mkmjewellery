@@ -2,7 +2,7 @@
 .footer-container {
   background-color: white;
   color: black;
-  padding: 60px 0;
+  padding: 40px 0; /* Reduced padding */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -14,7 +14,7 @@
 .footer-sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+  gap: 10px; /* Adjusted gap for better spacing */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -48,16 +48,18 @@
 /* About section styling */
 .footer-about {
   max-width: 400px;
+  text-align: justify; /* Ensure proper alignment */
 }
 
 .footer-about h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.2rem; /* Reduced font size */
+  margin-bottom: 15px;
+  text-align:justify;
 }
 
 .footer-about p {
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 0.9rem; /* Reduced font size */
+  margin-bottom: 15px;
 }
 
 /* QR code and App store buttons styling */
@@ -65,23 +67,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px; /* Reduced spacing */
 }
 
 .footer-qr img {
-  max-width: 250px;
-  max-height: 253px;
-  margin-bottom: 20px;
+  max-width: 200px; /* Adjusted size for better fit */
+  height: auto;
+  margin-bottom: 10px; /* Reduced margin */
 }
 
 .app-store-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px; /* Reduced gap */
 }
 
 .app-store-buttons img {
-  width: 149px;
-  height: 42px;
+  width: 130px; /* Adjusted size */
+  height: auto;
 }
 
 /* Social links styling */
@@ -95,7 +98,7 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px; /* Reduced gap */
 }
 
 .footer-social li {
@@ -105,7 +108,7 @@
 .footer-social a {
   color: black;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reduced font size */
   transition: color 0.3s;
 }
 
@@ -116,21 +119,22 @@
 /* Footer bottom text */
 .footer-bottom {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px; /* Reduced spacing */
   border-top: 1px solid #444;
-  padding-top: 20px;
-  font-size: 0.9rem;
+  padding-top: 10px; /* Reduced padding */
+  font-size: 0.8rem; /* Reduced font size */
 }
 
 .footer-bottom p {
   margin: 0;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .footer-sections {
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px; /* Adjusted gap for mobile */
+    padding: 15px; /* Reduced padding */
   }
 
   .footer-about, .footer-social {
@@ -138,6 +142,6 @@
   }
 
   .app-store-buttons img {
-    width: 120px;
+    width: 100px; /* Adjusted size for mobile */
   }
 }

@@ -21,19 +21,19 @@ const Home = () => {
       <Header/>
       <HeaderTwo/>
     <HeroCarousel/>
-       <GridLayout/>
+     <GridLayout/>
        <div className="features-section">
         <Features />
       </div>
 <Shop/>
     
-       <FeaturesCircular/>
+        <FeaturesCircular/>
     <NewArrivals/>
-    <GoldJewellery/>
+   <GoldJewellery/>
        <Reels/>    
-      <Diamond/>
+     <Diamond/>
       <GemStone/>
-      <Footer/>
+       <Footer/>
     </div>
   );
 };

@@ -11,6 +11,13 @@ const GoldJewellery = () => {
 
   return (
     <div className="goldjewellery-container">
+      {/* Heading Section */}
+      <div className="one">
+        <h1>Gold Jewellery</h1>
+        <p>Embrace the golden glow this festive season</p>
+      </div>
+
+      {/* Cards Section */}
       <div className="goldcards">
         {cards.map((card) => (
           <div className="goldcard" key={card.id}>

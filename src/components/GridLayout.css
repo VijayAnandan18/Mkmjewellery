@@ -1,4 +1,10 @@
 /* === BASE HEADING === */
+/* === BASE HEADING === */
+.Gridlayout {
+  width: 100%;
+  padding: 20px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
 
 h1 {
   position: relative;
@@ -69,12 +75,15 @@ h1 em {
   grid-template-columns: repeat(2, 200px); /* Default 2 columns */
   grid-auto-rows: minmax(200px, auto);
   gap: 50px; /* Gap between grid items */
-  width: 100%; /* Set the width of the grid container */
-  margin-left: 50px; /* Center the container horizontally */
+  max-width: 1200px; /* Set the width of the grid container */
+  margin: 0 auto;/* Center the container horizontally */
   height: 500px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .main {
+ 
   background: #ba8e23;
   width: 700px;
   grid-row: span 1; /* Default: 1 row height */
@@ -85,8 +94,8 @@ h1 em {
 /* Sub-div styling */
 .sub {
   background: #90d5ff;
-  height: 100%;
-  width: 500px;
+  height: 200px;
+  width: 400px;
 }
 
 /* Responsive Breakpoints */

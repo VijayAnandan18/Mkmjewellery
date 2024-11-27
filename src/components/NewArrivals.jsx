@@ -46,8 +46,10 @@ const NewArrivals = () => {
 
   return (
     <div className="new-arrivals">
-      <h1 className="new-arrivals-title">New Arrivals
-      </h1>
+       <div className="one">
+        <h1>Sparkling Trends</h1>
+      <p>Stay ahead with jewelry that sparkles with style.</p>
+      </div>
       <Slider {...settings}>
         {images.map((img, index) => (
           <div className="card" key={index}>
