@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./NewArrivals.css"; // Ensure you link the CSS file for updated styles
+import "./NewArrivals.css";
 
 const NewArrivals = () => {
   const settings = {
@@ -32,32 +32,33 @@ const NewArrivals = () => {
   };
 
   const images = [
-    "assets/newarrivals1.webp",
-    "assets/newarrivals2.webp",
-    "assets/newarrivals3.webp",
-    "assets/newarrivals4.webp",
-    "assets/newarrivals5.webp",
-    "assets/newarrivals6.webp",
-    "assets/newarrivals7.webp",
-    "assets/newarrivals8.webp",
-    "assets/newarrivals9.webp",
-    "assets/newarrivals10.webp",
+    { src: "assets/newarrivals1.webp", name: "Elegant Gold Necklace" },
+    { src: "assets/newarrivals2.webp", name: "Classic Gold Necklace" },
+    { src: "assets/newarrivals3.webp", name: "Emerald Bangle" },
+    { src: "assets/newarrivals4.webp", name: "Gold Earring" },
+    { src: "assets/newarrivals5.webp", name: "Ruby Stud Earrings" },
+    { src: "assets/newarrivals6.webp", name: "Gold Cuff Chain" },
+    { src: "assets/newarrivals7.webp", name: "Sapphire Kid Bracelet" },
+    { src: "assets/newarrivals8.webp", name: "Mangalasutra" },
+    { src: "assets/newarrivals9.webp", name: "Gold Emerald Necklace" },
+    { src: "assets/newarrivals10.webp", name: "Gold Stud Chain" },
   ];
 
   return (
     <div className="new-arrivals">
-       <div className="one">
+      <div className="one">
         <h1>Sparkling Trends</h1>
-      <p>Stay ahead with jewelry that sparkles with style.</p>
+        <p>Stay ahead with jewelry that sparkles with style.</p>
       </div>
       <Slider {...settings}>
-        {images.map((img, index) => (
+        {images.map((item, index) => (
           <div className="card" key={index}>
             <img
-              src={img}
+              src={item.src}
               alt={`New Arrival ${index + 1}`}
               className="card-image"
             />
+            <p className="image-caption">{item.name}</p>
           </div>
         ))}
       </Slider>

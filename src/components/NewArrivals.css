@@ -10,6 +10,16 @@
   font-size: 2rem;
   margin-bottom: 20px;
 }
+/* Ensure the caption text is styled appropriately */
+.image-caption {
+  font-size: 1rem;
+  color: var(--text);
+  margin-top: 3px;
+  text-align: flex-start;
+  font-weight: bold;
+  background-color: antiquewhite;
+}
+
 
 .slider .card {
   background: var(--card-bg);

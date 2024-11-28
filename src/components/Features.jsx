@@ -28,7 +28,7 @@ const Features = () => {
           </div>
           <div className="features-card">
             <img
-              src="assets/diamond.png"
+              src="assets/easy.png"
               alt="Diamonds"
               className="features-card-image"
             />

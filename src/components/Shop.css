@@ -92,7 +92,7 @@
     }
   
     .shop-card img {
-      max-width: 90%; /* Reduce card width to fit properly on mobile */
+      max-width: 150px; /* Reduce card width to fit properly on mobile */
       margin: 0 auto; /* Center the images */
     }
   }

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+
+
+.collection-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  align-items: flex-end;
+}
+
+.collection-card {
+  width: 100%;
+  background:#ba8e23 ;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.collection-card .collection-imgBox {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.collection-card .collection-imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+  transform-origin: right;
+}
+
+.collection-card:hover .collection-imgBox img {
+  transform: scale(1.5);
+}
+
+.collection-card .collection-content {
+  padding: 10px;
+}
+
+.collection-card .collection-content .collection-productName {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin: 5px 0;
+}

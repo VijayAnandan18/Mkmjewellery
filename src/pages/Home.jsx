@@ -12,7 +12,7 @@ import GoldJewellery from "../components/GoldJewellery";
 import Reels from "../components/Reels";
 import Diamond from "../components/Diamond";
 import Shop from "../components/Shop";
-import GemStone from "../components/GemStone";
+
 import Footer from "../components/Footer";
 const Home = () => {
   return (
@@ -32,7 +32,7 @@ const Home = () => {
    <GoldJewellery/>
        <Reels/>    
      <Diamond/>
-      <GemStone/>
+
        <Footer/>
     </div>
   );

@@ -7,14 +7,15 @@ import HeaderTwo from "../components/HeaderTwo";
 
 import Footer from "../components/Footer";
 import Abouthero from "../components/Abouthero";
+import Timeline from "../components/Timeline";
 const AboutUs = () => {
   return (
     <div className="AboutUs-container">
       <Marquee />
       <Header/>
       <HeaderTwo/>
-    <Abouthero/>
-   
+   <Abouthero/>
+   <Timeline/>
        <Footer/>
     </div>
   );

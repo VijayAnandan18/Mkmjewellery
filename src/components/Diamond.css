@@ -1,99 +1,52 @@
-/* Main container */
-.diamond-main-container {
-  margin-top: 40px;
-  padding: 0;
-  margin-bottom: 0;
+/* Container for the diamond layout */
+.diamond-page {
+  margin-top: 30px;;
 }
 
-/* Grid container */
-.diamond-grid-container {
-  margin: auto;
+.diamond-container {
   display: grid;
-  grid-gap: 1.1312rem; /* 0.707 * 1.6rem */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 12.8rem; /* 8 * 1.6rem */
-  grid-auto-flow: dense;
-  justify-content: center;
-  max-width: 75em;
-}
-
-/* Card styles */
-.diamond-card {
-  background-color: rgb(153, 128, 128);
-  box-shadow: 1px 3px 3px rgba(0, 10, 20, 0.06);
-}
-
-.diamond-card__image {
-  height: 100%;
+  grid-template-columns: 2fr 1fr; /* Full column and a smaller column */
+  gap: 10px; /* Add some spacing between columns */
   width: 100%;
-  display: flex;
+  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+  margin: 0 auto; /* Center the container */
+  padding: 10px; /* Reduce padding for a tighter layout */
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.diamond-card__image img {
-  height: 100%;
+/* Full-width image column */
+.diamond-full {
+  grid-column: 1 / 2;
+}
+
+.diamond-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* Two rows of equal height */
+  gap: 10px; /* Add spacing between rows */
+  grid-column: 2 / 3;
+}
+
+/* Images */
+.diamond-image {
   width: 100%;
-  object-fit: cover; /* Ensures the image fills the card without distortion */
+  height: auto;
+  object-fit: cover; /* Ensure the image covers its container */
+  border-radius: 5px; /* Optional: Add rounded corners */
 }
 
-/* Content for larger card */
-.diamond-card--2x {
-  grid-row: span 2;
-  grid-column: span 2;
-  height: 27rem; /* Set specific height */
-}
-
-.diamond-card__content {
-  padding: 1.6rem;
-}
-
-/* Typography and utility classes */
-.diamond-padding-large {
-  padding: 3.2rem;
-}
-
-.diamond-big-script {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Sacramento', cursive;
-  font-size: 4.3em;
-  line-height: 1.15em;
-  text-align: center;
-}
-
-/* Horizontal card adjustment */
-.diamond-card--horizontal {
-  grid-column: span 2; /* Ensure it spans 2 columns */
-}
-
-.diamond-card--horizontal .diamond-card__image {
-  width: 100%; /* Full width */
-  display: flex;
-}
-
-.diamond-card--horizontal .diamond-card__image img {
-  width: 100%; /* Full width */
-  object-fit: contain;
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Responsive adjustments */
-@media (max-width: 413px) {
-  .diamond-grid-container {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
-  }
-}
-
-@media (min-width: 627px) {
-  .diamond-grid-container {
-    grid-gap: 1.6rem;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .diamond-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: auto auto; /* Stack rows */
   }
 
-  .diamond-card--2x {
-    grid-row: span 3;
-    grid-column: span 2;
+  .diamond-full, .diamond-grid {
+    grid-column: 1 / -1; /* Full width for all sections */
+  }
+
+  .diamond-grid {
+    grid-template-rows: 1fr 1fr; /* Maintain two rows for images */
   }
 }
