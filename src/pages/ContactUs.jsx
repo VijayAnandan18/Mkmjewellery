@@ -13,7 +13,7 @@ const ContactUs= () => {
       <Header/>
       <HeaderTwo/>
 <Contact/>
-{/*<Reels/>*/}
+<Reels/>
        <Footer/>
     </div>
   );

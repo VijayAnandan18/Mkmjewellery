@@ -64,8 +64,8 @@ const Header = () => {
         <span className="country-name" style={{ color: "#700B00" }}>{country}</span>
       </div>
 
-      <div className="gold-rate">
-        <p className="shiny-text" data-text="Gold Rate">Gold Rate</p>
+      <div className="goldtext-rate">
+        <p className="shiny-text2" data-text="Gold Rate" >Gold Rate</p>
         <div className="dropdown">
           <button className="dropdown-button">▼</button>
           <div className="dropdown-content">
