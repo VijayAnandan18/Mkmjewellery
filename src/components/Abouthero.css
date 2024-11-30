@@ -1,63 +1,96 @@
 /* Main container */
 .about-hero-container {
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Grid container */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Grid container */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Default 2 columns */
+  grid-template-rows: auto auto; /* Default rows */
+  gap: 0px; /* Add some gap for spacing */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Grid items */
+.about-hero-content {
+  padding: 20px;
+  background-color: white;
+  color: #544114;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(112, 11, 0.1);
+}
+
+/* History section */
+.about-hero-content.history {
+  grid-column: 2; /* Place this section in the second column */
+  grid-row: 2; /* Place this section in the second row */
+}
+
+/* Image and video styles */
+.about-hero-image img,
+.about-hero-image video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific styles for videos */
+.about-hero-image video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Heading styles */
+.about-hero-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+ 
+   text-align: center;
+  background: linear-gradient(90deg, #614100cc, #d89700, #6b4700c4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .about-hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-    grid-template-rows: auto auto; /* 2 rows */
-    gap: 0px; /* Add some gap between grid items for visual spacing */
-    width: 100%;
-    max-width: 100%; /* Ensures it stretches full width */
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 10px; /* Smaller gap for compact layout */
   }
-  
-  /* Grid items */
-  .about-hero-content {
-    padding: 20px;
-    background-color: #eec664; /* Light background for readability */
-    
-    color: #544114;
-    box-shadow: 0 4px 8px rgb(112, 11, 0, 0.1);
+
+  /* Reorder for mobile */
+  .about-hero-image:nth-child(2) {
+    order: 1; /* First video */
   }
-  
-  /* History section */
+
+  .about-hero-content:nth-child(1) {
+    order: 2; /* "About Us" content */
+  }
+
   .about-hero-content.history {
-    grid-column: 2; /* Place this section in the second column */
-    grid-row: 2; /* Place this section in the second row */
+    order: 3; /* "Our Vision and Mission" content */
   }
-  
-  /* Image styles */
-  .about-hero-image img,
-  .about-hero-image video {
-    width: 100%; /* Make sure images and videos fit their container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure images and videos cover the space without distortion */
-    display: block;
-    border-radius: 8px; /* Rounded corners for a polished look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+
+  .about-hero-image:nth-child(4) {
+    display: none; /* Hide the second video */
   }
-  
-  /* Specific styles for videos */
-  .about-hero-image video {
-    max-width: 100%; /* Ensure the video does not exceed the container width */
-    height: auto; /* Maintain aspect ratio */
+
+  .about-hero-container {
+    padding: 10px;
   }
-  
-  /* Heading styles */
+
   .about-hero-heading {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #700B00; /* Dark color for contrast */
-    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .about-hero-container {
-      display:none;
-      }
+
+  .about-hero-content {
+    padding: 15px;
   }
-  
+}

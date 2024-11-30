@@ -98,8 +98,6 @@ body {
 .country-name {
   font-size: 1rem;
 }
-
-/* Gold Rate styles */
 .goldtext-rate {
   position: relative;
   font-size: 0.8rem; /* Reduced font size */
@@ -108,12 +106,11 @@ body {
   text-align: center;
 }
 
-/* Shiny Text Effect */
 .shiny-text2 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
-  font-size: 1.2em; /* Reduced font size */
-  letter-spacing: 2px; /* Adjust spacing */
+  font-size: 1.2em;
+  letter-spacing: 2px;
   position: relative;
   color: #700B00;
   overflow: hidden;
@@ -142,7 +139,6 @@ body {
   }
 }
 
-/* Dropdown styles */
 .dropdown {
   position: absolute;
   top: 100%;
@@ -151,30 +147,28 @@ body {
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  width: 150px;
+  width: auto; /* Dynamic width */
+  min-width: 300px;
 }
 
-.gold-rate:hover .dropdown {
+.goldtext-rate:hover .dropdown {
   display: block;
 }
 
-.dropdown-button {
-  background: none;
-  border: none;
-  font-size: 0.9rem;
-  color: black;
-  cursor: pointer;
+.gold-rate-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.dropdown-content {
-  padding: 10px;
-  font-size: 0.9rem;
-  color: #333;
+.gold-rate-table th,
+.gold-rate-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
-.dropdown-content p {
-  margin: 0;
-}
 
 /* Navigation Styles */
 .header-two {
@@ -219,7 +213,7 @@ body {
 
 /* Dropdown Styles */
 .nav-item:hover .dropdown {
-  display: block;
+  display: visible;
 }
 
 .dropdown li {

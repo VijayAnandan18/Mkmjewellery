@@ -21,9 +21,9 @@ const Features = () => {
               alt="HUID"
               className="features-card-image"
             />
-            <h4 className="features-card-title">BIS HUID</h4>
+            <h4 className="features-card-title">Guaranteed Purity</h4>
             <p className="features-card-description">
-              100% HUID Compliant Gold
+            HUID CERTIFIED GOLD JEWELLERY
             </p>
           </div>
           <div className="features-card">
@@ -32,9 +32,9 @@ const Features = () => {
               alt="Diamonds"
               className="features-card-image"
             />
-            <h4 className="features-card-title">Diamonds</h4>
+            <h4 className="features-card-title">Authenticity Assured</h4>
             <p className="features-card-description">
-              HUID certified diamonds
+            CERTIFIED DIAMOND JEWELLERY 
             </p>
           </div>
           <div className="features-card">
@@ -43,10 +43,10 @@ const Features = () => {
               alt="Exchange"
               className="features-card-image"
             />
-            <h4 className="features-card-title">Easy Exchange</h4>
+            <h4 className="features-card-title">Smart Savings Made Easy</h4>
             <p className="features-card-description">
-              This exclusive feature gives complete flexibility to our
-              customers.
+            DIGITAL GOLD APP FOR SAVINGS SCHEME 
+
             </p>
           </div>
           <div className="features-card">
@@ -55,10 +55,10 @@ const Features = () => {
               alt="Price Promise"
               className="features-card-image"
             />
-            <h4 className="features-card-title">Fair Price Promise</h4>
+            <h4 className="features-card-title">Exquisite Experience</h4>
             <p className="features-card-description">
-              This exclusive feature gives complete flexibility to our
-              customers.
+            SOPHISTICATED SHOWROOM FOR CUSTOMER SERVICE 
+
             </p>
           </div>
           <div className="features-card">
@@ -68,10 +68,24 @@ const Features = () => {
               className="features-card-image"
             />
             <h4 className="features-card-title">
-              Zero Deduction Gold Exchange
+            Convenient Exchanges
             </h4>
             <p className="features-card-description">
-              When you exchange "22KT" gold with us, we give 100% value.
+            New for Old Easy Exchange Policy
+            </p>
+          </div>
+        
+          <div className="features-card">
+            <img
+              src="assets/zero.png"
+              alt="Labour Practices"
+              className="features-card-image"
+            />
+            <h4 className="features-card-title">
+            Exceptional Service
+            </h4>
+            <p className="features-card-description">
+            Well-Trained Staffs for Best Customer Experience
             </p>
           </div>
         </div>

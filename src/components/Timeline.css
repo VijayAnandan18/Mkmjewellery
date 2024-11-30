@@ -70,6 +70,12 @@
     color: #1e1e1e;
     text-decoration: none;
   }
+  .two h1 {
+    font-size: 2rem; /* Default size for larger screens */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #700B00;
+  }
   
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -99,6 +105,10 @@
     .description {
       font-size: 0.9rem;
     }
+    .two h1 {
+      font-size: 1.5rem; /* Adjust font size for tablets and smaller screens */
+      line-height: 1.4;
+    }
   }
   
   @media (max-width: 480px) {
@@ -118,7 +128,10 @@
     .title {
       font-size: 0.9rem;
     }
-  
+    .two h1 {
+      font-size: 1.2rem; /* Adjust font size for mobile devices */
+      line-height: 1.4;
+    }
     .description {
       font-size: 0.8rem;
     }

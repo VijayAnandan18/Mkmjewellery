@@ -11,20 +11,22 @@
     gap: 1rem;
     margin-bottom: 2rem;
   }
-  
   .shop-nav button {
     padding: 0.8rem 2rem;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #700b00;
-    color: white;
+    background: linear-gradient(90deg, #614100cc, #d89700, #6b4700c4);
+    /* Gradient from dark to light to dark */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: none;
     border-radius: 5px;
+    color: white;
     transition: background-color 0.3s ease;
   }
   
+ 
   .shop-nav button:hover {
-    background-color: #b67f00;
+    background-color: #700b00;
   }
   
   /* Grid container for the jewelry images */

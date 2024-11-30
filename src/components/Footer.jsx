@@ -36,7 +36,7 @@ const Footer = () => {
             <li><a href="/diamond-jewellery">Diamond Jewellery</a></li>
             <li><a href="/gold-coins">Gold Coins</a></li>
             <li><a href="/silver-collection">Silver Collection</a></li>
-            <li><a href="/gemstones">Gemstones</a></li>
+            
           </ul>
         </div>
         <div className="footer-about">

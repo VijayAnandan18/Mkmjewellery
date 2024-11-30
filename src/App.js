@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
+import Enquiry from "./pages/Enquiry";
 import CollectionPage from "./pages/CollectionPage";
 import DiamondPage from "./pages/DiamondPage";
 import SilverPage from "./pages/SilverPage";
+
 function App() {
   return (
     <Router>
@@ -14,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs/>}/>
         <Route path="/contact" element={<ContactUs/>}/>
+        <Route path="/enquiry" element={<Enquiry/>}/>
         <Route path="/gold-jewellery" element={<CollectionPage/>}/>
         <Route path="/diamond-jewellery" element={<DiamondPage/>}/>
         <Route path="/silver-collection" element={<SilverPage/>}/>

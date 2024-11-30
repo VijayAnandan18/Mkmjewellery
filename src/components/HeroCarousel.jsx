@@ -3,11 +3,11 @@ import './HeroCarousel.css';
 
 const HeroCarousel = () => {
   const desktopMedia = [
-    { type: 'video', src: "assets/hero1.mp4" },
-    { type: 'image', src: "assets/hero1.png" },
-    { type: 'video', src: "assets/hero2.mp4" },
-    { type: 'video', src: "assets/hero3.mp4" },
     { type: 'video', src: "assets/hero4.mp4" },
+    { type: 'image', src: "assets/hero1.png" },
+    { type: 'video', src: "assets/hero3.mp4" },
+    { type: 'video', src: "assets/hero2.mp4" },
+    { type: 'video', src: "assets/hero1.webm" },
   ];
 
   const mobileMedia = [
